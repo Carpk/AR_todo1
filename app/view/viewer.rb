@@ -4,7 +4,7 @@ class ListView
   def initialize
   end
 
-  def display_error
+  def self.display_error
     raise ArgumentError, "Please choose to list, add, delete, or complete a task!!!"
   end
 

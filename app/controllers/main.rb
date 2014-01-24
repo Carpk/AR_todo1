@@ -12,12 +12,12 @@ when "list"
   ListView.header
   ListView.display_list(task_list)
 when "add"
-  task_list.add(ARGV[1])
-  ListView.add_message(ARGV[1])
+  Item.add(ARGV[1], ARGV[2])
+  ListView.add_message(ARGV[2])
 when "delete"
-  task_list.delete(ARGV[1])
+  Item.delete(ARGV[1])
   ListView.delete_message(ARGV[1])
 when "complete"
-  task_list.check_off(ARGV[1])
+  Item.complete(ARGV[1])
   ListView.check_message(ARGV[1])
 end
