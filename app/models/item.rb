@@ -23,5 +23,7 @@ class Item < ActiveRecord::Base
     item.status = 'C'
     item.completion_date = Date.today
     item.save
+
+    item.list.check_complete
   end
 end
